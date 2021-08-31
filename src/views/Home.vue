@@ -23,14 +23,17 @@
             I am a <span class="yellow">Developer,</span> <br>
             <span class="yellow">Interest</span> to learn something new
           </h2>
-          <v-btn text class="mt-5 format_underline" color="cyan darken-2"  @click="dialog = true"><v-icon size="10pt" class="mr-2">fas fa-arrow-right</v-icon>My Story</v-btn>
+          <v-row class="">
+            <v-btn text class="mt-5 format_underline" color="cyan darken-2"  @click="dialog = true"><v-icon size="10pt" class="mr-2">far fa-envelope-open</v-icon>My Story</v-btn>
+            <v-btn text class="mt-5 format_underline" rounded color="primary" :href="cv" target="_blank"><v-icon size="10pt" class="mr-2">fas fa-arrow-alt-circle-down</v-icon>Download my CV</v-btn>
+          </v-row>
         </div>
       </v-col>
       <BottomNav></BottomNav>
     </v-row>
     <v-dialog
             v-model="dialog"
-            max-width="290"
+            max-width="360"
     >
       <v-card>
         <v-card-title class="headline">My Story</v-card-title>
@@ -63,6 +66,7 @@ export default {
   data() {
     return {
       dialog: false,
+      cv: 'https://1drv.ms/b/s!AsQ8qxxvHcRjgdRrdEWYK9UTpLSmBw?e=DkMhii',
       desc: "Hello, I am Jul. I am a hard worker, I want to learn a lot as I can. I am so addicted to coding and IT. Summary of me, I am a student at PENS and a freelance web developer. I have a lot of experiences using laravel and vuejs, one of them is my participation in developing the SNMPN & SBMPN website which is a website for a help highschool student to apply to the vocational university. I also study about SEO and Cloud computing. Now, I interest in data science, so I joined the data science club on my campus.",
     }
   },
